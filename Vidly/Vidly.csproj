@@ -143,26 +143,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202102091424092_InitialModel.cs" />
-    <Compile Include="Migrations\202102091424092_InitialModel.designer.cs">
-      <DependentUpon>202102091424092_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\202102100720393_InitialCreate.cs" />
+    <Compile Include="Migrations\202102100720393_InitialCreate.designer.cs">
+      <DependentUpon>202102100720393_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202102091442408_AddIsSubscribedToCustomer.cs" />
-    <Compile Include="Migrations\202102091442408_AddIsSubscribedToCustomer.designer.cs">
-      <DependentUpon>202102091442408_AddIsSubscribedToCustomer.cs</DependentUpon>
+    <Compile Include="Migrations\202102100951307_InitialModel.cs" />
+    <Compile Include="Migrations\202102100951307_InitialModel.designer.cs">
+      <DependentUpon>202102100951307_InitialModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202102091446385_AddMembershipType.cs" />
-    <Compile Include="Migrations\202102091446385_AddMembershipType.designer.cs">
-      <DependentUpon>202102091446385_AddMembershipType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202102091451386_PopulateMembershipTypes.cs" />
-    <Compile Include="Migrations\202102091451386_PopulateMembershipTypes.designer.cs">
-      <DependentUpon>202102091451386_PopulateMembershipTypes.cs</DependentUpon>
+    <Compile Include="Migrations\202102100957426_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\202102100957426_PopulateMembershipTypes.designer.cs">
+      <DependentUpon>202102100957426_PopulateMembershipTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\MyDBContext.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -206,8 +201,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Movies\Random.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
-    <Content Include="Views\Customer\Details.cshtml" />
-    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -229,17 +224,14 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202102091424092_InitialModel.resx">
-      <DependentUpon>202102091424092_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202102100720393_InitialCreate.resx">
+      <DependentUpon>202102100720393_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102091442408_AddIsSubscribedToCustomer.resx">
-      <DependentUpon>202102091442408_AddIsSubscribedToCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202102100951307_InitialModel.resx">
+      <DependentUpon>202102100951307_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102091446385_AddMembershipType.resx">
-      <DependentUpon>202102091446385_AddMembershipType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102091451386_PopulateMembershipTypes.resx">
-      <DependentUpon>202102091451386_PopulateMembershipTypes.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202102100957426_PopulateMembershipTypes.resx">
+      <DependentUpon>202102100957426_PopulateMembershipTypes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
