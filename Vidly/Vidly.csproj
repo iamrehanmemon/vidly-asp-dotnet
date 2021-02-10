@@ -155,10 +155,6 @@
     <Compile Include="Migrations\202102100957426_PopulateMembershipTypes.designer.cs">
       <DependentUpon>202102100957426_PopulateMembershipTypes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202102101121187_AddNameToMembershipTypes.cs" />
-    <Compile Include="Migrations\202102101121187_AddNameToMembershipTypes.designer.cs">
-      <DependentUpon>202102101121187_AddNameToMembershipTypes.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202102101121569_SetNameOfMembershipTypes.cs" />
     <Compile Include="Migrations\202102101121569_SetNameOfMembershipTypes.designer.cs">
       <DependentUpon>202102101121569_SetNameOfMembershipTypes.cs</DependentUpon>
@@ -240,9 +236,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102100957426_PopulateMembershipTypes.resx">
       <DependentUpon>202102100957426_PopulateMembershipTypes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102101121187_AddNameToMembershipTypes.resx">
-      <DependentUpon>202102101121187_AddNameToMembershipTypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102101121569_SetNameOfMembershipTypes.resx">
       <DependentUpon>202102101121569_SetNameOfMembershipTypes.cs</DependentUpon>
