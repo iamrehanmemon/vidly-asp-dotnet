@@ -167,6 +167,10 @@
     <Compile Include="Migrations\202102110629494_Genres.designer.cs">
       <DependentUpon>202102110629494_Genres.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202102111125013_AddBirthDate.cs" />
+    <Compile Include="Migrations\202102111125013_AddBirthDate.designer.cs">
+      <DependentUpon>202102111125013_AddBirthDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -259,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102110629494_Genres.resx">
       <DependentUpon>202102110629494_Genres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102111125013_AddBirthDate.resx">
+      <DependentUpon>202102111125013_AddBirthDate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
