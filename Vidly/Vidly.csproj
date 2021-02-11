@@ -159,7 +159,16 @@
     <Compile Include="Migrations\202102101121569_SetNameOfMembershipTypes.designer.cs">
       <DependentUpon>202102101121569_SetNameOfMembershipTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202102110627205_AddMovie.cs" />
+    <Compile Include="Migrations\202102110627205_AddMovie.designer.cs">
+      <DependentUpon>202102110627205_AddMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102110629494_Genres.cs" />
+    <Compile Include="Migrations\202102110629494_Genres.designer.cs">
+      <DependentUpon>202102110629494_Genres.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -208,6 +217,7 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -239,6 +249,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102101121569_SetNameOfMembershipTypes.resx">
       <DependentUpon>202102101121569_SetNameOfMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102110627205_AddMovie.resx">
+      <DependentUpon>202102110627205_AddMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102110629494_Genres.resx">
+      <DependentUpon>202102110629494_Genres.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
