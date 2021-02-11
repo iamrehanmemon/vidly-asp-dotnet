@@ -1,6 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Data.Entity;
 using System.Linq;
-using System.Data.Entity;
 using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
@@ -26,55 +25,58 @@ namespace Vidly.Controllers
             var membershipTypes = _context.MembershipTypes.ToList();
             var viewModel = new CustomerFormViewModel
             {
+                Customer = new Customer(),
                 MembershipTypes = membershipTypes
             };
-            return View("CustomerForm",viewModel);
+
+            return View("CustomerForm", viewModel);
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)
         {
-            /*For Security Purpose If we Dont want each property to be updated UpdateCustomer
-             * which has only properties that can be change*/
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new CustomerFormViewModel
+                {
+                    Customer = customer,
+                    MembershipTypes = _context.MembershipTypes.ToList()
+                };
+
+                return View("CustomerForm", viewModel);
+            }
+
             if (customer.Id == 0)
                 _context.Customers.Add(customer);
             else
             {
                 var customerInDb = _context.Customers.Single(c => c.Id == customer.Id);
-                /*Model to get Updated but it opens up Security Holes !!! Microsoft Method
-                TryUpdateModel(customerInDb,"", new string[] { "Name","Email"});*/
-
-                /*Mapper.map(customer, customerInDb);*/
-
                 customerInDb.Name = customer.Name;
                 customerInDb.MembershipTypeId = customer.MembershipTypeId;
                 customerInDb.IsSubscribedToNewsletter = customer.IsSubscribedToNewsletter;
-            
             }
+
             _context.SaveChanges();
 
-            return RedirectToAction("Index","Customers");
+            return RedirectToAction("Index", "Customers");
         }
-
 
         public ViewResult Index()
         {
             var customers = _context.Customers.Include(c => c.MembershipType).ToList();
-            
+
             return View(customers);
         }
 
-
-
-
         public ActionResult Details(int id)
         {
-            var customers = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.Id == id);
+            var customer = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.Id == id);
 
-            if (customers == null)
+            if (customer == null)
                 return HttpNotFound();
 
-            return View(customers);
+            return View(customer);
         }
 
         public ActionResult Edit(int id)
@@ -85,12 +87,12 @@ namespace Vidly.Controllers
                 return HttpNotFound();
 
             var viewModel = new CustomerFormViewModel
-            {   
+            {
                 Customer = customer,
                 MembershipTypes = _context.MembershipTypes.ToList()
             };
 
-            return View("CustomerForm",viewModel);
+            return View("CustomerForm", viewModel);
         }
     }
 }
