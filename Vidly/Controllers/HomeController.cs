@@ -7,9 +7,13 @@ using System.Web.Mvc;
 namespace Vidly.Controllers
 {   [AllowAnonymous]
     public class HomeController : Controller
-    {
+    {   
+        //Only if performance test is slow, and if you would benefit from caching
+        //[OutputCache(Duration = 50, Location = OutputCacheLocation.Server , VaryByParam ="*", NoStore =true)]
+
         public ActionResult Index()
-        {
+        {   
+            
             return View();
         }
 
